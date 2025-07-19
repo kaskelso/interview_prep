@@ -15,5 +15,5 @@ Large challenge in literature is many systems assume no verification latency. In
 Literature also uses ROC curves for ranking 
 
 Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/kaskelso/interview_prep/blob/main/readings/662c42679571ef35419c9935_647607123e84a06a426ce627_classification_metrics_014-min.png)
 
