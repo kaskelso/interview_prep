@@ -9,3 +9,11 @@ Detecting credit card fraud challenges:
 3) Verification latencey (delay in verifying fraud because professionals contact suspicious purchases) 
 
 Pipeline for labeled datasets: automatic tools flag suspicious purchases with alerts -> investigator contacts customer confirms or denies purchase -> transaction labled
+
+Large challenge in literature is many systems assume no verification latency. In the real world most transactions aren't checked and large delay between alert and customer verification. 
+
+Literature also uses ROC curves for ranking 
+
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
