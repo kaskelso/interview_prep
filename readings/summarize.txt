@@ -1,1 +1,11 @@
+Paper #1: Credit Card Fraud Detection: A Realistic Modeling
+and a Novel Learning Strategy
 
+Notes: 
+
+Detecting credit card fraud challenges:
+1) concept drift (fraud changes over time)
+2) class imbalance (far more normal transactions then fraduelent)
+3) Verification latencey (delay in verifying fraud because professionals contact suspicious purchases) 
+
+Pipeline for labeled datasets: automatic tools flag suspicious purchases with alerts -> investigator contacts customer confirms or denies purchase -> transaction labled
