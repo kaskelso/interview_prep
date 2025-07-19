@@ -27,6 +27,14 @@ Layers of real world fraud detection system (FDS)
 
 Feature vectors of transactions: merchant ID, cardholder ID, purchase amount, date, and time. Other features are added the aggregation functions like: average expenditure of the customer every week/month, the average number of transactions per day or in the same shop, the average transaction amount, and the location of the last purchase
 
+The layers that can be updated rapidly is 1-3. 4 requires new labeled data to be retrained. 
+
+Ok so they model investigator checking like this
+
+At = {x i ∈ Tt s.t. r (x i ) ≤ k}
+
+Where x i ∈ Tt is a specific tranasaction at Tt, r (x i ) is the rank of the transaction according to PKt (+|x i ) (probability it is fraud given the transaction), k is maximum number of transactions that can be checked daily. Basically, transactions become alerts at time t if risk score is 1 to number can be checked daily. 
+
 
 
 
