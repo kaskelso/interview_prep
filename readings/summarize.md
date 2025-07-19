@@ -20,5 +20,15 @@ ROC example from (https://www.evidentlyai.com/classification-metrics/explain-roc
 Layers of real world fraud detection system (FDS)
 
 1) terminal: intial layer with security, correct pin, suffifcient funds, etc.
-2) transaction blocking rules: essentially a bunch of if else statements to block obiviously dodgey things. Example in paper is if website and unsecured then deny transaction
-3) 
+2) transaction blocking rules: essentially a bunch of if else statements to block obiviously dodgey things. Example in paper is if website and unsecured then deny transaction. These rules have to be very precise and then after passing the purchase is compared to the customers previous purchase history
+3) Scoring rules: again a bunch of if else statements involving scoring the transaction based on previous behavior. Example in paper is a transaction that took place  in another continent 1 hour after previous purchase
+4) Data driven model: data driven classifer to analyze many feature vectors to determine fraud
+
+
+
+
+
+
+
+
+
