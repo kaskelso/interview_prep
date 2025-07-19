@@ -22,7 +22,16 @@ Layers of real world fraud detection system (FDS)
 1) terminal: intial layer with security, correct pin, suffifcient funds, etc.
 2) transaction blocking rules: essentially a bunch of if else statements to block obiviously dodgey things. Example in paper is if website and unsecured then deny transaction. These rules have to be very precise and then after passing the purchase is compared to the customers previous purchase history
 3) Scoring rules: again a bunch of if else statements involving scoring the transaction based on previous behavior. Example in paper is a transaction that took place  in another continent 1 hour after previous purchase
-4) Data driven model: data driven classifer to analyze many feature vectors to determine fraud
+4) Data driven model: data driven classifer to analyze many feature vectors to determine fraud (paper focuses on this, and probably what I will as well in this position!)
+5) investigators, final layer where humans check and generate the labeled datasets
+
+Feature vectors of transactions: merchant ID, cardholder ID, purchase amount, date, and time. Other features are added the aggregation functions like: average expenditure of the customer every week/month, the average number of transactions per day or in the same shop, the average transaction amount, and the location of the last purchase
+
+
+
+
+
+
 
 
 
