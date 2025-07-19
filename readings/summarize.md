@@ -17,3 +17,8 @@ Literature also uses ROC curves for ranking, but precision (reducing false posti
 ROC example from (https://www.evidentlyai.com/classification-metrics/explain-roc-curve): 
 ![alt text](https://github.com/kaskelso/interview_prep/blob/main/readings/662c42679571ef35419c9935_647607123e84a06a426ce627_classification_metrics_014-min.png)
 
+Layers of real world fraud detection system (FDS)
+
+1) terminal: intial layer with security, correct pin, suffifcient funds, etc.
+2) transaction blocking rules: essentially a bunch of if else statements to block obiviously dodgey things. Example in paper is if website and unsecured then deny transaction
+3) 
