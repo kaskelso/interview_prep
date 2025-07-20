@@ -35,6 +35,33 @@ At = {x i ∈ Tt s.t. r (x i ) ≤ k}
 
 Where x i ∈ Tt is a specific tranasaction at Tt, r (x i ) is the rank of the transaction according to PKt (+|x i ) (probability it is fraud given the transaction), k is maximum number of transactions that can be checked daily. Basically, transactions become alerts at time t if risk score is 1 to number can be checked daily. 
 
+Then they model feedback (labeled data) as:
+
+Ft = {(x i , y i ) s.t. x i is from cards(At )}
+
+Bascially, number of feedbacks depends of set of k controlled cards at At. 
+
+Next they assume a constant latency
+
+Dt −δ = {(x i , y i ), x i ∈ Tt −δ}.
+
+Is this where all non-disputed transactions are labeled as geninune after some time period. So if δ is 2 at day 10 we get labels from day 8. 
+
+Next there is alert precision
+
+Pk (t) = |TPk (t)| / k 
+
+This is the proportion of fraud in the alerts. But it is more accurate to reframe as cards, since multiple alerts can be from the same card:
+
+CPk (t) = |C+t | / k
+
+|C+t | is the set of correctly identified cards at time t. Then they normalize this amount to account for days when there is less than k fraudulent cards.
+
+Two methods for dealing with cost imbalance:
+1) resampling
+2) cost-based methods
+
+Resampling includes SMOTETomek (down sample majority class while resampling minority by generating synthetic data from knn)
 
 
 
