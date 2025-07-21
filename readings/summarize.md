@@ -110,6 +110,10 @@ Challenges with oversampling minority class and undersampling majority class:
 
 oversampling creates ties among examples and can lead to overfitting. undersampling can remove important examples in the majority leading to reduced learning on the majority class. 
 
+Informed undersampling: basicallly you learn subconcepts in majority class and down sample in a way keeping that representative variation
+
+informed oversampling: SMOTE (newer is SMOTEtomek) uses KNN clustering in minority class to generate new synthetic data based on euclidian distances. 
+
 
 
 
