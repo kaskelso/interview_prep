@@ -97,5 +97,18 @@ They also investigated SSB using reweighting, got a little confused here but it 
 Conclusions: training models with higher weight toward feedbacks is important for precision. Best to train on feedbacks and delayed datasets then aggregate. 
 
 
+# Paper #2 Learning from Imbalanced Data
+He et al. 2009
+
+This paper covers conceptual challenges in classifications of unbalanced datasets
+
+heterogenous vs homogeneous concepts for classification:
+
+homogeneous means that there are discrete classes without "subconcepts" (i.e., clustering within main cluster) and little noise. Hetergenous means concepts have subconcepts that can create further layers of class imbalances and challenge the learning process. In hetergenous situations decision trees can make "small disjuncts" which are rules covering a small set of data. From either noise or imbalanced subconcepts it can hinder the ability to learn and classify. 
+
+
+
+
+
 
 
