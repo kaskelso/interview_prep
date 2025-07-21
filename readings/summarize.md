@@ -114,6 +114,10 @@ Informed undersampling: basicallly you learn subconcepts in majority class and d
 
 informed oversampling: SMOTE (newer is SMOTEtomek) uses KNN clustering in minority class to generate new synthetic data based on euclidian distances. 
 
+tomek: creates links between data in the majority class and synthetic data of the minority class and cleans up overlap between classes after data generation
+
+cluster based oversampling: does k means clustering then oversamples all but the largest cluster
+
 
 
 
