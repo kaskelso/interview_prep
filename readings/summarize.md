@@ -118,7 +118,9 @@ tomek: creates links between data in the majority class and synthetic data of th
 
 cluster based oversampling: does k means clustering then oversamples all but the largest cluster
 
+cost senstive learning: incorperating "cost" in learning process. This is just the the penalty incurred from misclassifying a class.
 
+Kernels and SVM: little confusing but basically methods to identify a hyperplane in feature space that seperates out clusters that have a non-linear relationship. 
 
 
 
