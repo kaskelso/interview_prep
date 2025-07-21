@@ -1,4 +1,4 @@
-Paper #1: Credit Card Fraud Detection: A Realistic Modeling
+#Paper #1: Credit Card Fraud Detection: A Realistic Modeling
 and a Novel Learning Strategy Pozzolo et al. 2018
 
 Notes: 
@@ -75,10 +75,17 @@ Active: monitors incoming data to look at changes in distributions or clustering
 
 Passive: classifier is updated after a certain amount of new data becomes available 
 
-The next big challenge is Alert–Feedback Interaction and Sample Selection. This means that because investigators can only check a small number 
+The next big challenge is Alert–Feedback Interaction and Sample Selection. This means that because investigators can only check a small number of high risk charges meaning biased sampling accumulates in both classes. This can be addressed by semisupervised weighting of samples that resembel examples in the test data. Although, this seems like it would result in a model that doesn't generalize well. 
 
+They break the problem into two categories: classifying based on alerts Ft and one classifying on delayed supervised samples Dt, and then aggregating the posterior of those for PKt (+|x i ) to determine alerts. 
 
+Aggregation classifier posterior
 
+PAt (+|x) = αPFt (+|x) + (1 − α)PDt (+|x)
+
+PFt (+|x) is the probability of the feedback model and PDt (+|x) is the probability of the delayed sample model. α is just an assigned weight balancing the contribution of either model. 
+
+Next they use two methods; a windowed classifier and an ensemble method. I'm guessing the windowed is looking a chunks of examples over time windows where the ensemble takes everything? Either way they both look like tree-based methods. 
 
 
 
