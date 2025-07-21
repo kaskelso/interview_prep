@@ -106,7 +106,9 @@ heterogenous vs homogeneous concepts for classification:
 
 homogeneous means that there are discrete classes without "subconcepts" (i.e., clustering within main cluster) and little noise. Hetergenous means concepts have subconcepts that can create further layers of class imbalances and challenge the learning process. In hetergenous situations decision trees can make "small disjuncts" which are rules covering a small set of data. From either noise or imbalanced subconcepts it can hinder the ability to learn and classify. 
 
+Challenges with oversampling minority class and undersampling majority class:
 
+oversampling creates ties among examples and can lead to overfitting. undersampling can remove important examples in the majority leading to reduced learning on the majority class. 
 
 
 
