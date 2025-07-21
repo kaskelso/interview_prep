@@ -63,6 +63,20 @@ Two methods for dealing with cost imbalance:
 
 Resampling includes SMOTETomek (down sample majority class while resampling minority by generating synthetic data from knn)
 
+Cost-based methods assign a cost to missing fraudlent charges proportional to the transaction amount. They generate a lot of false positives
+
+Concept drift:
+1) valid transactions change over time
+2) fraud transactions change over time
+
+Concept drift adaptation categories: active and passive 
+
+Active: monitors incoming data to look at changes in distributions or clustering, after enough change their is a trigger to update the classifier
+
+Passive: classifier is updated after a certain amount of new data becomes available 
+
+The next big challenge is Alert–Feedback Interaction and Sample Selection. This means that because investigators can only check a small number 
+
 
 
 
