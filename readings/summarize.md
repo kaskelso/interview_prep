@@ -87,12 +87,14 @@ PFt (+|x) is the probability of the feedback model and PDt (+|x) is the probabil
 
 Next they use two methods; a windowed classifier and an ensemble method. I'm guessing the windowed is looking a chunks of examples over time windows where the ensemble takes everything? Either way they both look like tree-based methods. 
 
+Testing these datasets, AW worked well for maximizing recent high risk cards, whereas R trained on all samples daily was a better classifier generally. 
 
 
+Concept drift: Super cool! The show a static classifier, windowed classifier, and the aggregate method. The windowed one starts doing worse over time because it loses what is lost previously and drifts off target. 
 
+They also investigated SSB using reweighting, got a little confused here but it looks like the punchline is the classifier not corrected for SSB works just as well. 
 
-
-
+Conclusions: training models with higher weight toward feedbacks is important for precision. Best to train on feedbacks and delayed datasets then aggregate. 
 
 
 
