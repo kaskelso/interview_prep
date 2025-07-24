@@ -5,3 +5,4 @@ In this repo I am collecting relevant literature on the current space of fraud d
 
 I also worked on building an xgboost (preferred in the position) model with a pracitce dataset (https://www.kaggle.com/competitions/ieee-fraud-detection/data) in python. The dataset was huge! ~470 features and ~500,000 examples and only ~3% were fraud. I did feature selection by removing features with more than 50% missing data in the fraud and non-fraud categories and dropped additional features based on collinearity. I also explored over-undersampling with SMOTEtomek. Both approaches worked well but using xgboost with high weighting towards the minor category did ever so slightly better. Both models were able to get good precision 0.91-0.93 on the minor category but both had lower recall 0.66-0.71.
 
+UPDATE: I tried imputing with KNN imputer instead of just median. KNN imputer takes forever and didn't improve the model. 
