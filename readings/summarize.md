@@ -129,6 +129,11 @@ Multiclass imbalance: basically just need to make n ROC & PR curves for n classe
 Rest of paper summarizes current needs of the time. 
 
 
+# Next readings skimmed some practical comparisons of various approaches to learning in fraud detection of imbalanced datasets
+Comparison and analysis of logistic regression, Naïve Bayes and KNN machine learning algorithms for credit card fraud detection -  Meenakshi et al. 2020
 
+Credit card fraud detection using machine learning techniques: A comparative analysis -  Awoyemi et a. 2017
+
+These papers compare performance of methods like naive bayes, KNN, and logistic regression. It's interesting but I wouldn't say the papers are particularly well written and they give conflicting outcomes and recommendations. From both it seems like naive bayes can be a decent classifier. 
 
 
