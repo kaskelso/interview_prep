@@ -122,5 +122,13 @@ cost senstive learning: incorperating "cost" in learning process. This is just t
 
 Kernels and SVM: little confusing but basically methods to identify a hyperplane in feature space that seperates out clusters that have a non-linear relationship. 
 
-Next few sections go over accuracy, error, precision, recall, reciever opperating curves (ROC), and Precision Recall (PR) curves. ROC can be overly optimistic in imbalanced datasets so PR curves are more informative. 
+Next few sections go over accuracy, error, precision, recall, reciever opperating curves (ROC), and Precision Recall (PR) curves. ROC can be overly optimistic in imbalanced datasets so PR curves are more informative. Talks about cost functions which is the same as loss functions for assessing and comparing model performance. 
+
+Multiclass imbalance: basically just need to make n ROC & PR curves for n classes. 
+
+Rest of paper summarizes current needs of the time. 
+
+
+
+
 
