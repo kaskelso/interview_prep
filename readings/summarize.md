@@ -1,5 +1,5 @@
-# Paper #1: Credit Card Fraud Detection: A Realistic Modeling
-and a Novel Learning Strategy Pozzolo et al. 2018
+# Paper #1: Credit Card Fraud Detection: A Realistic Modeling and a Novel Learning Strategy 
+Pozzolo et al. 2018
 
 Notes: 
 
