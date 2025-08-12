@@ -102,29 +102,29 @@ This paper covers conceptual challenges in classifications of unbalanced dataset
 
 heterogenous vs homogeneous concepts for classification:
 
-homogeneous means that there are discrete classes without "subconcepts" (i.e., clustering within main cluster) and little noise. Hetergenous means concepts have subconcepts that can create further layers of class imbalances and challenge the learning process. In hetergenous situations decision trees can make "small disjuncts" which are rules covering a small set of data. From either noise or imbalanced subconcepts it can hinder the ability to learn and classify. 
+homogeneous means that there are discrete classes without "subconcepts" (i.e., clustering within main cluster) and little noise. Heterogenous means concepts have subconcepts that can create further layers of class imbalances and challenge the learning process. In heterogenous situations decision trees can make "small disjuncts" which are rules covering a small set of data. From either noise or imbalanced subconcepts it can hinder the ability to learn and classify. 
 
 Challenges with oversampling minority class and undersampling majority class:
 
 oversampling creates ties among examples and can lead to overfitting. undersampling can remove important examples in the majority leading to reduced learning on the majority class. 
 
-Informed undersampling: basicallly you learn subconcepts in majority class and down sample in a way keeping that representative variation
+Informed undersampling: basically you learn subconcepts in majority class and down sample in a way keeping that representative variation
 
-informed oversampling: SMOTE (newer is SMOTEtomek) uses KNN clustering in minority class to generate new synthetic data based on euclidian distances. 
+informed oversampling: SMOTE (newer is SMOTEtomek) uses KNN clustering in minority class to generate new synthetic data based on Euclidian distances. 
 
 tomek: creates links between data in the majority class and synthetic data of the minority class and cleans up overlap between classes after data generation
 
 cluster based oversampling: does k means clustering then oversamples all but the largest cluster
 
-cost senstive learning: incorperating "cost" in learning process. This is just the the penalty incurred from misclassifying a class.
+cost sensitive learning: incorporating "cost" in learning process. This is just the penalty incurred from misclassifying a class.
 
-Kernels and SVM: little confusing but basically methods to identify a hyperplane in feature space that seperates out clusters that have a non-linear relationship. 
+Kernels and SVM: little confusing but basically methods to identify a hyperplane in feature space that separates out clusters that have a non-linear relationship. 
 
-Next few sections go over accuracy, error, precision, recall, reciever opperating curves (ROC), and Precision Recall (PR) curves. ROC can be overly optimistic in imbalanced datasets so PR curves are more informative. Talks about cost functions which is the same as loss functions for assessing and comparing model performance. 
+Next few sections go over accuracy, error, precision, recall, receiver operating curves (ROC), and Precision Recall (PR) curves. ROC can be overly optimistic in imbalanced datasets so PR curves are more informative. Talks about cost functions which is the same as loss functions for assessing and comparing model performance. 
 
 Multiclass imbalance: basically just need to make n ROC & PR curves for n classes. 
 
-Rest of paper summarizes current needs of the time. 
+Rest of paper summarizes current needs of the time.
 
 
 # Next readings skimmed some practical comparisons of various approaches to learning in fraud detection of imbalanced datasets
