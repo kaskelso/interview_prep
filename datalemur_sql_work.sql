@@ -188,7 +188,7 @@ WHERE days_between > 0 AND days_between < 2
 
 
 /*
-HOLY MOTHER OF MOSES this was annoying but I learned a a lot
+This was a challenging problem but I learned a a lot
 Ok so the goal was to have two tables where one was of employee queries and the other
 employee info and you had to count the number of employees for bins of unique queriers (historgram)
 first you had to left join the queries table to employees but first filter the table to only have queries from
