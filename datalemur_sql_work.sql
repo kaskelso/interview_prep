@@ -192,7 +192,7 @@ This was a challenging problem but I learned a a lot
 Ok so the goal was to have two tables where one was of employee queries and the other
 employee info and you had to count the number of employees for bins of unique queriers (historgram)
 first you had to left join the queries table to employees but first filter the table to only have queries from
-certain dates then turn that into a temperary table
+certain dates then turn that into a temporary table
 then you need to make another subtable counting the number of employee id occurences in that previous tables
 Then count those count categories (I know so annoying)
 Then count the zeros
