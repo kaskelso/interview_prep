@@ -1,39 +1,37 @@
 # Paper #1: Credit Card Fraud Detection: A Realistic Modeling and a Novel Learning Strategy 
 Pozzolo et al. 2018
 
-Notes: 
-
 Detecting credit card fraud challenges:
 1) concept drift (fraud changes over time)
-2) class imbalance (far more normal transactions then fraduelent)
-3) Verification latencey (delay in verifying fraud because professionals contact suspicious purchases) 
+2) class imbalance (far more normal transactions then fraudulent)
+3) Verification latency (delay in verifying fraud because professionals contact suspicious purchases) 
 
-Pipeline for labeled datasets: automatic tools flag suspicious purchases with alerts -> investigator contacts customer confirms or denies purchase -> transaction labled
+Pipeline for labeled datasets: automatic tools flag suspicious purchases with alerts -> investigator contacts customer confirms or denies purchase -> transaction labeled
 
 Large challenge in literature is many systems assume no verification latency. In the real world most transactions aren't checked and large delay between alert and customer verification. 
 
-Literature also uses ROC curves for ranking, but precision (reducing false postive rate) is emphasized for companies. Makes sense since because with the large class imbalance you'd run into the false positive paradox (https://en.wikipedia.org/wiki/Base_rate_fallacy)
+Literature also uses ROC curves for ranking, but precision (reducing false positive rate) is emphasized for companies. Makes sense since because with the large class imbalance you'd run into the false positive paradox (https://en.wikipedia.org/wiki/Base_rate_fallacy)
 
 ROC example from (https://www.evidentlyai.com/classification-metrics/explain-roc-curve): 
 ![alt text](https://github.com/kaskelso/interview_prep/blob/main/readings/662c42679571ef35419c9935_647607123e84a06a426ce627_classification_metrics_014-min.png)
 
-Layers of real world fraud detection system (FDS)
+Layers of real-world fraud detection system (FDS)
 
-1) terminal: intial layer with security, correct pin, suffifcient funds, etc.
-2) transaction blocking rules: essentially a bunch of if else statements to block obiviously dodgey things. Example in paper is if website and unsecured then deny transaction. These rules have to be very precise and then after passing the purchase is compared to the customers previous purchase history
+1) terminal: initial layer with security, correct pin, sufficient funds, etc.
+2) transaction blocking rules: essentially a bunch of if else statements to block obliviously dodgy things. Example in paper is if website and unsecured then deny transaction. These rules have to be very precise and then after passing the purchase is compared to the customers previous purchase history
 3) Scoring rules: again a bunch of if else statements involving scoring the transaction based on previous behavior. Example in paper is a transaction that took place  in another continent 1 hour after previous purchase
-4) Data driven model: data driven classifer to analyze many feature vectors to determine fraud (paper focuses on this, and probably what I will as well in this position!)
+4) Data driven model: data driven classifier to analyze many feature vectors to determine fraud (paper focuses on this, and probably what I will as well in this position!)
 5) investigators, final layer where humans check and generate the labeled datasets
 
 Feature vectors of transactions: merchant ID, cardholder ID, purchase amount, date, and time. Other features are added the aggregation functions like: average expenditure of the customer every week/month, the average number of transactions per day or in the same shop, the average transaction amount, and the location of the last purchase
 
 The layers that can be updated rapidly is 1-3. 4 requires new labeled data to be retrained. 
 
-Ok so they model investigator checking like this
+Ok so they model investigator checking like this 
 
 At = {x i ∈ Tt s.t. r (x i ) ≤ k}
 
-Where x i ∈ Tt is a specific tranasaction at Tt, r (x i ) is the rank of the transaction according to PKt (+|x i ) (probability it is fraud given the transaction), k is maximum number of transactions that can be checked daily. Basically, transactions become alerts at time t if risk score is 1 to number can be checked daily. 
+Where x i ∈ Tt is a specific transaction at Tt, r (x i ) is the rank of the transaction according to PKt (+|x i ) (probability it is fraud given the transaction), k is maximum number of transactions that can be checked daily. Basically, transactions become alerts at time t if risk score is 1 to number can be checked daily. 
 
 Then they model feedback (labeled data) as:
 
@@ -75,7 +73,7 @@ Active: monitors incoming data to look at changes in distributions or clustering
 
 Passive: classifier is updated after a certain amount of new data becomes available 
 
-The next big challenge is Alert–Feedback Interaction and Sample Selection. This means that because investigators can only check a small number of high risk charges meaning biased sampling accumulates in both classes. This can be addressed by semisupervised weighting of samples that resembel examples in the test data. Although, this seems like it would result in a model that doesn't generalize well. 
+The next big challenge is Alert–Feedback Interaction and Sample Selection. This means that because investigators can only check a small number of high risk charges meaning biased sampling accumulates in both classes. This can be addressed by semisupervised weighting of samples that resemble examples in the test data. Although, this seems like it would result in a model that doesn't generalize well. 
 
 They break the problem into two categories: classifying based on alerts Ft and one classifying on delayed supervised samples Dt, and then aggregating the posterior of those for PKt (+|x i ) to determine alerts. 
 
@@ -90,7 +88,7 @@ Next they use two methods; a windowed classifier and an ensemble method. I'm gue
 Testing these datasets, AW worked well for maximizing recent high risk cards, whereas R trained on all samples daily was a better classifier generally. 
 
 
-Concept drift: Super cool! The show a static classifier, windowed classifier, and the aggregate method. The windowed one starts doing worse over time because it loses what is lost previously and drifts off target. 
+Concept drift: Super cool! The show a static classifier, windowed classifier, and the aggregate method. The windowed one starts doing worse over time because it loses what it learned previously and drifts off target. 
 
 They also investigated SSB using reweighting, got a little confused here but it looks like the punchline is the classifier not corrected for SSB works just as well. 
 
