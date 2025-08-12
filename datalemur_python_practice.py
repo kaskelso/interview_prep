@@ -121,7 +121,7 @@ compound_interest(500, 10, 50, 3)
 
 
 
-#what a pain in the butt. Takes a number that gets the word for the number and the word for all the previous numbers and counts the number of letters
+#This was challenging. Takes a number that gets the word for the number and the word for all the previous numbers and counts the number of letters
 
 def total_letters(N):
     word = []
