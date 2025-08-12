@@ -262,7 +262,7 @@ GROUP BY card_name
 ORDER BY diff DESC;
 
 
--- gives mean from a table of occurances and number of items, learned integer truncates numbers and need numeric
+-- gives mean from a table of occurrences and number of items, learned integer truncates numbers and need numeric
 
 SELECT ROUND(
 (SUM((order_occurrences * item_count)) / SUM(order_occurrences))::numeric, 1)
@@ -274,7 +274,7 @@ SELECT drug, (total_sales - cogs) AS total_profit
 FROM pharmacy_sales
 ORDER BY total_profit DESC LIMIT 3;
 
--- Gets the count of lossing medications from manufacturers by absolute value and sorts
+-- Gets the count of losing medications from manufacturers by absolute value and sorts
 
 SELECT manufacturer, COUNT(drug), ABS(SUM((total_sales - cogs))) AS total_loss
 FROM pharmacy_sales
